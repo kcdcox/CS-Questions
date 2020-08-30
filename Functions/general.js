@@ -57,11 +57,27 @@ function singleOccurance(a){
   });
   return k;
 }
+//Find the common elements of 2 int arrays
+function commonInts(a,b){
+  let M = new Map();
+  let c = [];
+  for(let i=0;i<a.length;i++){
+    M.set(a[i]);
+  }
+  for(let y=0; y<b.length;y++){
+    if(M.has(b[y])){
+      c.push(b[y]);
+    }
+  }
+  console.log(c);
+  return c;
+}
 
-module.exports = {mostFrequentNumber, tenPairs, singleOccurance}
+module.exports = {mostFrequentNumber, tenPairs, singleOccurance, commonInts}
 
 /* 
-Given 2 integer arrays, determine if the 2nd array is a rotated version of the 1st array. Ex. Original Array A={1,2,3,5,6,7,8} Rotated Array B={5,6,7,8,1,2,3}
+Given 2 integer arrays, determine if the 2nd array is a rotated version of the 1st array. 
+  Ex. Original Array A={1,2,3,5,6,7,8} Rotated Array B={5,6,7,8,1,2,3}
 Write fibbonaci iteratively and recursively (bonus: use dynamic programming)
 Find the common elements of 2 int arrays
 Implement binary search of a sorted array of integers
@@ -73,6 +89,7 @@ Implement squareroot function
 Implement an exponent function (bonus: now try in log(n) time)
 Write a multiply function that multiples 2 integers without using *
 HARD: Given a function rand5() that returns a random int between 0 and 5, implement rand7()
-HARD: Given a 2D array of 1s and 0s, count the number of "islands of 1s" (e.g. groups of connecting 1s)
+HARD: Given a 2D array of 1s and 0s, count the number of "islands of 1s" 
+  (e.g. groups of connecting 1s)
 function */
 

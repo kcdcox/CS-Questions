@@ -4,7 +4,6 @@ const general = require('../Functions/general');
 test('Most frequent integer in an array', () => {
   const a = [1,2,3,2,3,4,3,3,3,4,]
   expect(general.mostFrequentNumber(a)).toBe(3);
-
 });
 //Find pairs in an integer array whose sum is equal to 10
 test('Pairs of Sum 10', () => {
@@ -21,6 +20,12 @@ test('find the single Occurance', () => {
   const b = [1, 1];
   expect(general.singleOccurance(a)).toBe(1);
 });
-
+//Find the common ints in both arrays
+test('find the single Occurance', () => {
+  const a = [1,2,3,4,5,10];
+  const b = [0,1,2,4,10,11,12];
+  const c = [1,2,4,10]
+  expect(general.commonInts(a,b).sort()).toEqual(c.sort());
+});
 
 
