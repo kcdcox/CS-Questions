@@ -12,3 +12,10 @@ test('reverses string', () => {
   expect(strings.reverse(" a house is nice ")).toBe(" nice is house a ");
   expect(strings.reverse(" a house   is nice ")).toBe(" nice is   house a ");
 });
+
+//Find the first non-repeated character in a String
+test('first non-repeated character in a String', () => {
+    expect(strings.firstNoRepeat("apples are delicious")).toBe("r");
+    
+  });
+

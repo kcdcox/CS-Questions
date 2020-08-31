@@ -51,11 +51,7 @@ function singleOccurance(a){
       }
     }
   }
-  let k;
-  S.forEach(function(value){
-    k = value;
-  });
-  return k;
+  return S.keys().next().value;
 }
 //Find the common elements of 2 int arrays
 function commonInts(a,b){
@@ -69,7 +65,6 @@ function commonInts(a,b){
       c.push(b[y]);
     }
   }
-  console.log(c);
   return c;
 }
 
@@ -79,7 +74,6 @@ module.exports = {mostFrequentNumber, tenPairs, singleOccurance, commonInts}
 Given 2 integer arrays, determine if the 2nd array is a rotated version of the 1st array. 
   Ex. Original Array A={1,2,3,5,6,7,8} Rotated Array B={5,6,7,8,1,2,3}
 Write fibbonaci iteratively and recursively (bonus: use dynamic programming)
-Find the common elements of 2 int arrays
 Implement binary search of a sorted array of integers
 Implement binary search in a rotated array (ex. {5,6,7,8,1,2,3})
 Use dynamic programming to find the first X prime numbers
