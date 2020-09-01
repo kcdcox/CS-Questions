@@ -70,7 +70,7 @@ function commonInts(a,b){
 function fibboRecursive(n) {
   if(n == 0) { return 0; }
   if(n <= 1) { return 1; }
-  return fibboRecursive(n-1) + fibboRecursive(n-2)
+  return fibboRecursive(n - 1) + fibboRecursive(n - 2);
 }
 
 
