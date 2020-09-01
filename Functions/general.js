@@ -1,10 +1,9 @@
-
 // Find the most frequent integer in an array
 function mostFrequentNumber(a){
   let hashT = new Map();
   for(let i = 0; i < a.length; i++){
     if(hashT.has(a[i])){
-      hashT.set(a[i], hashT.get(a[i]) + 1); 
+      hashT.set(a[i], hashT.get(a[i]) + 1);
     } else {
       hashT.set(a[i],1);
     }
@@ -24,13 +23,13 @@ function tenPairs(a){
     if(M.has(x)){
       pairs.push([a[i], x]);
       if(M.get(x) == 1){
-        M.delete(x);   
+        M.delete(x);
       } else{
         M.set(x, M.get(x) - 1);
       }
     }
     if(M.has(a[i])){
-      M.set(a[i], M.get(a[i]) + 1); 
+      M.set(a[i], M.get(a[i]) + 1);
     } else {
       M.set(a[i],1);
     }
@@ -43,8 +42,8 @@ function singleOccurance(a){
   let S = new Map();
   for(let i = 0; i<a.length; i++){
     if(!M.has(a[i])){
-      M.set(a[i], 1); 
-      S.set(a[i], 1); 
+      M.set(a[i], 1);
+      S.set(a[i], 1);
     } else {
       if(S.has(a[i])){
         S.delete(a[i])
@@ -68,10 +67,23 @@ function commonInts(a,b){
   return c;
 }
 
-module.exports = {mostFrequentNumber, tenPairs, singleOccurance, commonInts}
+function fibboRecursive(n) {
+  if(n == 0) { return 0; }
+  if(n <= 1) { return 1; }
+  return fibboRecursive(n-1) + fibboRecursive(n-2)
+}
 
-/* 
-Given 2 integer arrays, determine if the 2nd array is a rotated version of the 1st array. 
+
+module.exports = {
+  mostFrequentNumber,
+  tenPairs,
+  singleOccurance,
+  commonInts,
+  fibboRecursive,
+}
+
+/*
+Given 2 integer arrays, determine if the 2nd array is a rotated version of the 1st array.
   Ex. Original Array A={1,2,3,5,6,7,8} Rotated Array B={5,6,7,8,1,2,3}
 Write fibbonaci iteratively and recursively (bonus: use dynamic programming)
 Implement binary search of a sorted array of integers
@@ -83,7 +95,7 @@ Implement squareroot function
 Implement an exponent function (bonus: now try in log(n) time)
 Write a multiply function that multiples 2 integers without using *
 HARD: Given a function rand5() that returns a random int between 0 and 5, implement rand7()
-HARD: Given a 2D array of 1s and 0s, count the number of "islands of 1s" 
+HARD: Given a 2D array of 1s and 0s, count the number of "islands of 1s"
   (e.g. groups of connecting 1s)
 function */
 

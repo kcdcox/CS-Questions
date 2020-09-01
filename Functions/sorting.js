@@ -1,4 +1,3 @@
-
 // =================================BUBBLE SORT
 function bubbleSort(a) {
     let len = a.length, temp, swapped = true;
@@ -16,7 +15,7 @@ function bubbleSort(a) {
     }
     return a;
 }
-// =================================SELECTION SORT
+// =================================INSERTION SORT
 function insertionSort(a){
     let k, i;
     for(let j = 1 ; j < a.length; j++){
@@ -32,10 +31,8 @@ function insertionSort(a){
 }
 
 module.exports = {bubbleSort, insertionSort}
-  
+
 /*
-Implement selection sort
-Implement insertion sort
 Implement merge sort
 Implement quick sort
 */

@@ -27,5 +27,14 @@ test('find the single Occurance', () => {
   const c = [1,2,4,10]
   expect(general.commonInts(a,b).sort()).toEqual(c.sort());
 });
+//Find fibbonaccie value from number
+test('Find fibbonaccie value from number', () => {
+  expect(general.fibboRecursive(0)).toBe(0);
+  expect(general.fibboRecursive(1)).toBe(1);
+  expect(general.fibboRecursive(2)).toBe(1);
+  expect(general.fibboRecursive(3)).toBe(2);
+  expect(general.fibboRecursive(10)).toBe(55);
+  expect(general.fibboRecursive(20)).toBe(6765);
+});
 
 
