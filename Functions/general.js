@@ -73,7 +73,6 @@ function fibboRecursive(n) {
   return fibboRecursive(n - 1) + fibboRecursive(n - 2);
 }
 
-
 module.exports = {
   mostFrequentNumber,
   tenPairs,
