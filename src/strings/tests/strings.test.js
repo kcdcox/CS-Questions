@@ -1,4 +1,5 @@
-import { reverse, firstNoRepeat } from "../functions/strings/strings";
+const { reverse } = require("../reverse");
+const { firstNoRepeat } = require("../firstNoRepeat");
 
 // Reverses words in an array, while keeping spaces
 test("reverses string", () => {
